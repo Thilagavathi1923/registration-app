@@ -21,15 +21,36 @@ const db = getFirestore(app);
 
 window.register = async function () {
 
-  const name = document.getElementById("name").value;
-
+  const fullname = document.getElementById("fullname").value;
+  const dob = document.getElementById("dob").value;
+  const gender = document.getElementById("gender").value;
+  const marital_status = document.getElementById("marital_status").value;
   const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
+  const city = document.getElementById("city").value;
+  const state = document.getElementById("state").value;
+  const qualification = document.getElementById("qualification").value;
+  const occupation = document.getElementById("occupation").value;
+  const age = document.getElementById("age").value;
+  const password = document.getElementById("password").value;
 
   try {
 
     await addDoc(collection(db, "registrations"), {
-      name: name,
-      email: email,
+      fullname,
+      dob,
+      gender,
+      marital_status,
+      email,
+      phone,
+      address,
+      city,
+      state,
+      qualification,
+      occupation,
+      age,
+      password,
       createdAt: new Date()
     });
 

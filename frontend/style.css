@@ -1,34 +1,37 @@
-<<<<<<< HEAD
 body {
-    font-family: Arial;
-    text-align: center;
-    margin-top: 40px;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
 }
 
 .container {
     width: 400px;
-    margin: auto;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-input, button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-=======
-body {
-    font-family: Arial;
+h2 {
     text-align: center;
-    margin-top: 40px;
 }
 
-.container {
-    width: 400px;
-    margin: auto;
-}
-
-input, button {
+input,
+select,
+textarea,
+button {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
->>>>>>> 460071e9061a1ce3d470f3cdea1d96069f842e16
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
 }
