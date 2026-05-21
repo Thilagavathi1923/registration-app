@@ -1,3 +1,104 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Personal Registration Form</h2>
+
+    <input type="text" id="fullname" placeholder="Full Name">
+    <input type="date" id="dob">
+
+    <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <select id="marital_status">
+        <option>Single</option>
+        <option>Married</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+    <textarea id="address" placeholder="Address"></textarea>
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="state" placeholder="State">
+    <input type="text" id="qualification" placeholder="Qualification">
+    <input type="text" id="occupation" placeholder="Occupation">
+    <input type="number" id="age" placeholder="Age">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+
+    <h3>Registered Users</h3>
+    <ul id="users"></ul>
+</div>
+
+<script src="script.js"></script>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAAGomtULiPY4p_tqgq5Q6bnEf40hWP1P8",
+  authDomain: "registration-app-5f3ac.firebaseapp.com",
+  projectId: "registration-app-5f3ac",
+  storageBucket: "registration-app-5f3ac.firebasestorage.app",
+  messagingSenderId: "868138598832",
+  appId: "1:868138598832:web:f083f5c11e200eebbe9675"
+};
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+document.getElementById("registrationForm")
+.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+
+  const email = document.getElementById("email").value;
+
+  try {
+
+    await addDoc(collection(db, "registrations"), {
+      name: name,
+      email: email,
+      createdAt: new Date()
+    });
+
+    alert("Registration Successful");
+
+    document.getElementById("registrationForm").reset();
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Error saving data");
+
+  }
+
+});
+
+</script>
+</body>
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,4 +143,5 @@
 <script src="script.js"></script>
 
 </body>
+>>>>>>> 460071e9061a1ce3d470f3cdea1d96069f842e16
 </html>
