@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Registration Form</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h2>Personal Registration Form</h2>
+    <div class="container">
 
-    <input type="text" id="fullname" placeholder="Full Name">
-    <input type="date" id="dob">
+        <h2>Personal Registration Form</h2>
 
-    <select id="gender">
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-    </select>
+        <input type="text" id="fullname" placeholder="Full Name">
 
-    <select id="marital_status">
-        <option>Single</option>
-        <option>Married</option>
-    </select>
+        <input type="date" id="dob">
 
-    <input type="email" id="email" placeholder="Email">
-    <input type="text" id="phone" placeholder="Phone">
-    <textarea id="address" placeholder="Address"></textarea>
-    <input type="text" id="city" placeholder="City">
-    <input type="text" id="state" placeholder="State">
-    <input type="text" id="qualification" placeholder="Qualification">
-    <input type="text" id="occupation" placeholder="Occupation">
-    <input type="number" id="age" placeholder="Age">
-    <input type="password" id="password" placeholder="Password">
+        <select id="gender">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
 
-    <button onclick="register()">Register</button>
+        <select id="marital_status">
+            <option>Single</option>
+            <option>Married</option>
+        </select>
 
-    <h3>Registered Users</h3>
-    <ul id="users"></ul>
-</div>
+        <input type="email" id="email" placeholder="Email">
 
-<script src="script.js"></script>
+        <input type="text" id="phone" placeholder="Phone">
+
+        <textarea id="address" placeholder="Address"></textarea>
+
+        <input type="text" id="city" placeholder="City">
+
+        <input type="text" id="state" placeholder="State">
+
+        <input type="text" id="qualification" placeholder="Qualification">
+
+        <input type="text" id="occupation" placeholder="Occupation">
+
+        <input type="number" id="age" placeholder="Age">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="register()">Register</button>
+
+        <h3>Registered Users</h3>
+
+        <ul id="users"></ul>
+
+    </div>
+
+    <script type="module" src="script.js"></script>
 
 </body>
+
 </html>
