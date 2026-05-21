@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Personal Registration Form</h2>
+
+    <input type="text" id="fullname" placeholder="Full Name">
+    <input type="date" id="dob">
+
+    <select id="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+    </select>
+
+    <select id="marital_status">
+        <option>Single</option>
+        <option>Married</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Email">
+    <input type="text" id="phone" placeholder="Phone">
+    <textarea id="address" placeholder="Address"></textarea>
+    <input type="text" id="city" placeholder="City">
+    <input type="text" id="state" placeholder="State">
+    <input type="text" id="qualification" placeholder="Qualification">
+    <input type="text" id="occupation" placeholder="Occupation">
+    <input type="number" id="age" placeholder="Age">
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="register()">Register</button>
+
+    <h3>Registered Users</h3>
+    <ul id="users"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
